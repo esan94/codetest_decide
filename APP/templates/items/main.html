@@ -1,0 +1,47 @@
+{% extends 'layouts/master.html' %}
+{% set active_page = 'main' %}
+{% block title %}Sales Forecasting{% endblock %}
+{% block body %}
+
+<p></p>
+<form method="post">
+<div class="row">
+    <div class="col-md-3">
+        <p></p>
+      </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <label for="exampleSelect1" class="form-label mt-4">Select a Store:</label>
+        <select class="form-select" id="store" name="store">
+            {% for store in stores %}
+                <option>{{ store }}</option>"
+            {% endfor %}
+        </select>
+    </div>  </div>
+  <div class="col-md-3">
+    <p></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+      <p></p>
+    </div>
+<div class="col-md-6">
+  <div class="form-group">
+      <label for="exampleSelect1" class="form-label mt-4">Select a Product:</label>
+      <select class="form-select" id="product" name="product">
+          {% for product in products %}
+              <option>{{ product }}</option>"
+          {% endfor %}
+      </select>
+  </div>  </div>
+<div class="col-md-3">
+  <p></p>
+</div>
+</div>
+
+<p></p>
+</form>
+
+{% endblock %}
